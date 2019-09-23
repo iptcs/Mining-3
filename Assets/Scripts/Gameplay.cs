@@ -28,14 +28,14 @@ public class Gameplay : MonoBehaviour
             bronzeSupply -= 1;
             playerBronze += 1;
             Instantiate(Bronze, new Vector3(spawnSpot, 0, 0), Quaternion.identity);
-            spawnSpot += 1;
+            spawnSpot += 2;
         }
-        if (bronzeSupply <= 0 && silverSupply > 0)
+        else if (silverSupply > 0)
             {
             silverSupply -= 1;
             playerSilver += 1;
             Instantiate(Silver, new Vector3(spawnSpot, 0, 0), Quaternion.identity);
-            spawnSpot += 1;
+            spawnSpot += 2;
         }
         DisplayPlayerSupplies();
     }
